@@ -1,0 +1,43 @@
+.single-movie-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+    background-color:#1e1e1e;
+    margin:0px;
+    min-height:100vh;
+    color:white
+}
+.each-movie-box-container{
+    background-color:black;
+    height:50%;
+    width:100%;
+    margin:20px;
+    color:white;
+    padding:15px;
+    display: flex;
+}
+.cast-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+ 
+  
+  .cast-image {
+    width: 200px;
+    height: 250px;
+    border-radius: 8px;
+    margin:20px
+  }
+  
+  .cast-name {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .cast-character {
+    font-size: 12px;
+    opacity: 0.8;
+  }

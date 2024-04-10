@@ -1,0 +1,25 @@
+.movies-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+    background-color:#1e1e1e;
+    margin:0px;
+    height:100vh
+
+   
+}
+.movie-title{
+    color:white;
+    font-size: 15px;
+    text-align:start;
+    padding-left: 30px;
+    margin-top:0px
+}
+.each-movie-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+}
