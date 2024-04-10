@@ -32,13 +32,13 @@ const Navbar = ({ onSearch }) => {
           </Link>
         </ul>
         <form onSubmit={handleSearch}>
-          <input
+          <input style={{marginRight:'10px'}}
             type="text"
             value={searchQuery}
             onChange={handleInputChange}
             placeholder="Search Movie"
           />
-          <button type="submit">Search</button>
+          <button type="submit" style={{backgroundColor:'grey',borderWidth:'0px',borderRadius:'5px',fontSize:'13px',height:'25px',color:'white'}}>Search</button>
         </form>
       </div>
     </div>

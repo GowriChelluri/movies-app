@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const SearchedMoviePage = ({ searchQuery }) => {
   const [searchResults, setSearchResults] = useState([]);
-  const API_KEY = '91af57ac251a42fc781975ebb474135d'
+  const API_KEY = '91af57ac251a42fc781975ebb474135d';
 
   useEffect(() => {
     const fetchSearchResults = async () => {
@@ -31,18 +31,17 @@ const SearchedMoviePage = ({ searchQuery }) => {
   }, [searchQuery]);
 
   return (
-  
-      
-      <ul className='movies-container'>
-        {searchResults.map((movie) => (
-         <div className="each-movie-container">
-         <Link to={`/movie/${movie.id}`}>
-           <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="movie-poster" style={{width:"300px",height:"350px",marginTop:'30px',marginLeft:'30px',marginRight:'30px'}}/></Link>
-         <h1 key={movie.id} className='movie-title'>{movie.title}</h1>
-       </div>
-        ))}
-      </ul>
-   
+    <ul className='movies-container'>
+      {searchResults.map((movie) => (
+        <div className="each-movie-container" key={movie.id}>
+          <Link to={`/movie/${movie.id}`}>
+            <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="movie-poster" style={{ width: "300px", height: "350px", marginTop: '30px', marginLeft: '30px', marginRight: '30px' }} />
+          </Link>
+          <h1 className='movie-title'>{movie.title}</h1>
+          <p style={{ fontSize: '15px', color: 'white', marginTop: '8px' }}>Rating: {parseFloat(movie.vote_average).toFixed(1)}</p>
+        </div>
+      ))}
+    </ul>
   );
 };
 
