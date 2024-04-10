@@ -61,8 +61,9 @@ const MovieDetails = () => {
           <p style={{ fontSize: '16px', color: 'grey' }}><span style={{ fontSize: '20px', color: 'white' }}>Overview:</span><br />{movieDetails.overview}</p>
         </div>
       </div>
-     
-      <MovieCast movieId={movie_id} /> 
+      
+      <MovieCast movieId={movie_id} />
+      
     </div>
   );
 };

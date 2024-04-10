@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './index.css';
 
 const MovieCast = ({ movieId }) => {
   const [cast, setCast] = useState([]);
@@ -24,7 +25,7 @@ const MovieCast = ({ movieId }) => {
 
   return (
     <div>
-      <h2 style={{marginLeft:'20px'}}>Cast</h2>
+      <h2 style={{ marginLeft: '20px' }}>Cast</h2>
       <div className="cast-container">
         {cast.map((actor) => (
           <div key={actor.id} className="cast-member">
@@ -36,6 +37,7 @@ const MovieCast = ({ movieId }) => {
               />
             )}
             <p className="cast-name">{actor.name}</p>
+            <p className="character-name">Character : {actor.character}</p> 
           </div>
         ))}
       </div>

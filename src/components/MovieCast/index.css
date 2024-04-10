@@ -1,4 +1,19 @@
 .cast-container{
     display:flex;
-    margin-left:20px
+    margin-left:20px;
+    align-items: center;
+   
+}
+.cast-name{
+   text-align:center;
+   margin-top: 0px;
+   margin-bottom:0px
+}
+.cast-image{
+    height:300px
+}
+.character-name{
+    text-align:center;
+   margin-top: 0px;
+   font-size: 14px;
 }
