@@ -66,13 +66,16 @@ const MovieDetails = () => {
         <div style={{display:'flex',flexDirection:'column'}}>
           <h1 style={{fontSize:'20px',margin:'0px'}}>{movieDetails.title}</h1>
           <p style={{fontSize:'15px',color:'blue',marginTop:'8px'}}>Rating: {movieDetails.vote_average}</p>
-          <p> {movieDetails.runtime} minutes</p>
-          <p style={{fontSize:'14px',marginTop:'0px'}}>{movieDetails.genres.map(genre => genre.name).join(', ')}</p>
+          <div style={{display:'flex',alignItems:'center'}}>
+            <p style={{fontSize:'14px',marginTop:'0px',marginRight:'10px'}}>{movieDetails.runtime} minutes</p>
+            <p style={{fontSize:'14px',marginTop:'0px'}}>{movieDetails.genres.map(genre => genre.name).join(', ')}</p>
+          </div>
           <p style={{fontSize:'12px',marginTop:'0px'}}>Release Date: {movieDetails.release_date}</p>
-          <p>Overview: {movieDetails.overview}</p>
+          <p style={{fontSize:'16px',color:'grey'}}><span style={{fontSize:'20px',color:'white'}}>Overview:</span><br/>{movieDetails.overview}</p>
         </div>
+        
       </div>
-      <h1>CAST</h1>
+      <h1 style={{fontSize:'15px'}}>CAST</h1>
       {cast && (
               <div className="cast-container">
                 {cast.map(castMember => (

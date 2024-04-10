@@ -23,8 +23,8 @@ const App=()=>{
         <Route exact path="/top-rated-movies" component={TopRatedMovies}/>
         <Route exact path="/upcoming-movies" component={UpcomingMovies}/>
         <Route exact path="/movie/:movie_id" component={MovieDetails} />
-        <Route exact path="/movie/:movie_id">
-          <SearchedMoviePage searchQuery={searchQuery} />
+        <Route exact path="/searched">
+          <SearchedMoviePage searchQuery={searchQuery} /> 
         </Route>
       </Switch>
   </BrowserRouter>

@@ -31,7 +31,7 @@ const UpcomingMovies = () => {
       
       <ul className='movies-container'>
         {movies.map((movie) => (
-          <div classNmae="each-movie-container">
+          <div className="each-movie-container">
             <Link to={`/movie/${movie.id}`}>
               <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="movie-poster" style={{width:"300px",height:"350px",marginTop:'30px',marginLeft:'30px',marginRight:'30px'}}/></Link>
             <h1 key={movie.id} className='movie-title'>{movie.title}</h1>
